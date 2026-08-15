@@ -1,0 +1,47 @@
+{
+  "description": "Advanced PII patterns for regional, tax, financial, and business identifiers",
+  "patterns": {
+    "eu_vat": {
+      "regex": "\\b[A-Z]{2}[0-9]{6,12}\\b",
+      "description": "European Union VAT Identification Number",
+      "example": "DE276427488",
+      "masked": "**2*****7488"
+    },
+    "indian_aadhaar": {
+      "regex": "\\b[0-9]{4}[0-9]{4}[0-9]{4}\\b",
+      "description": "Indian Aadhaar number (12 digits)",
+      "example": "123456789012",
+      "masked": "**** **** *9012"
+    },
+    "indian_pan": {
+      "regex": "\\b[A-Z]{5}[0-9]{4}[A-Z]{1}\\b",
+      "description": "Indian Permanent Account Number (PAN)",
+      "example": "ABCDE1234F",
+      "masked": "*****234F"
+    },
+    "uk_nino": {
+      "regex": "\\b[A-Z]{2}[0-9]{6}[A-Z]{0,2}\\b",
+      "description": "UK National Insurance Number",
+      "example": "AB123456C",
+      "masked": "** *** *** C"
+    },
+    "us_ein": {
+      "regex": "\\b[0-9]{2}-[0-9]{7}\\b",
+      "description": "US Employer Identification Number (EIN)",
+      "example": "12-3456789",
+      "masked": "**-*6789"
+    },
+    "swift_bic": {
+      "regex": "\\b[A-Z]{6}[A-Z0-9]{2}([A-Z0-9]{3})?\\b",
+      "description": "SWIFT/BIC code",
+      "example": "DEUTDEFF500",
+      "masked": "DEUT******500"
+    },
+    "isbn": {
+      "regex": "\\bISBN(?:-1[03])?:?\\s*(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|[0-9X]{9}[0-9X])[0-9]{1,5}[- ]?[0-9]{1,7}[- ]?[0-9]{1,6}[- ]?[0-9X]\\b",
+      "description": "International Standard Book Number",
+      "example": "ISBN 978-3-16-148410-0",
+      "masked": "ISBN 978-3-16-1****-0"
+    }
+  }
+}

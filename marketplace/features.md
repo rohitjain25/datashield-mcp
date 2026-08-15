@@ -1,0 +1,16 @@
+- Inspect files: name, size, format, rows, columns, encoding
+- Profile datasets: data types, missing values, unique counts, statistics
+- Detect duplicates: exact rows, duplicate IDs, emails, phones
+- Detect PII: emails, phones, IP addresses, SSN, credit card, regional IDs
+- Detect secrets: API keys, GitHub tokens, JWT, private keys
+- Sanitize data: mask, hash, remove, replace, tokenize
+- Normalize data: column names, whitespace, casing, dates,phone,email
+- Validate data: required columns, uniqueness, ranges, allowed values
+- Clean dataset: trim whitespace, standardize empty strings, drop exact duplicates
+- Convert files: CSV, TSV, JSON, JSONL, XLSX, Parquet interchangeably
+- Generate reports: Markdown, JSON, HTML with DataShield Quality Score
+- Preview changes: see before/after before applying operations
+- Create sanitized copy: timestamped copy with applied sanitization
+- Local‑first: zero network calls, works offline
+- Privacy‑safe: no telemetry, no data leaves your machine
+- MCP‑ready: works with Claude Desktop, Claude Code, Cursor, and other MCP clients

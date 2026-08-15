@@ -1,0 +1,1 @@
+Replace with actual screenshots of the MCP server running in Claude Desktop, showing tool list and example outputs.

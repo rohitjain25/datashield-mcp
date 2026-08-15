@@ -1,0 +1,1 @@
+Clean, validate, deduplicate and sanitize CSV, Excel and JSON files locally through Claude and other AI agents — without uploading your data.

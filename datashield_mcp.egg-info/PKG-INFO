@@ -1,0 +1,172 @@
+Metadata-Version: 2.4
+Name: datashield-mcp
+Version: 0.1.0
+Summary: Local data cleaning, validation, deduplication, PII detection, and sanitization MCP server
+Author-email: DataShield Contributors <contributors@datashield.example>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/datashield-mcp
+Project-URL: Documentation, https://github.com/yourusername/datashield-mcp#readme
+Project-URL: Repository, https://github.com/yourusername/datashield-mcp
+Project-URL: Issues, https://github.com/yourusername/datashield-mcp/discussions
+Keywords: mcp,data cleaning,privacy,pandas,csv,excel,json
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Data Scientists
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Security
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: openpyxl>=3.1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Dynamic: license-file
+
+# DataShield MCP
+
+> Clean, validate, deduplicate and sanitize CSV, Excel and JSON files locally through Claude and other AI agents — without uploading your data.
+
+![DataShield MCP](https://via.placeholder.com/800x400?text=DataShield+MCP+Screenshot)
+
+## 🚀 Features
+
+- **Inspect Files**: Get metadata, format, size, row/column counts
+- **Profile Datasets**: Statistical summary, data types, missing values
+- **Detect Duplicates**: Find exact duplicate rows or values in columns
+- **Detect PII**: Identify emails, phones, IP addresses, SSNs, credit cards
+- **Detect Secrets**: Find API keys, tokens, private keys
+- **Sanitize Data**: Mask, hash, remove, replace, or tokenize sensitive data
+- **Normalize Data**: Clean column names, whitespace, casing, dates, phones, emails
+- **Validate Data**: Check required columns, values, ranges, uniqueness
+- **Compare Datasets**: Diff schema and row counts between two files
+- **Clean Dataset**: Safe defaults: trim, standardize empties, drop duplicates
+- **Convert Files**: CSV ↔ JSON ↔ Excel ↔ Parquet ↔ TSV
+- **Generate Reports**: Markdown, JSON, HTML reports with quality score
+- **Preview Changes**: See before/after before applying modifications
+- **Create Sanitized Copy**: Timestamped copy with applied sanitization
+
+## 🔒 Privacy First
+
+- **100% Local**: No data leaves your machine
+- **No External APIs**: Works completely offline
+- **No Telemetry**: No tracking or data collection
+- **Safe Defaults**: Never overwrites original files by default
+- **Audit‑Ready**: All operations create new files; source remains intact
+
+## 📦 Installation
+
+```bash
+# Using pip
+pip install datashield-mcp
+
+# Using pipx (recommended)
+pipx install datashield-mcp
+```
+
+## 🤖 Claude Desktop Setup
+
+Add to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "datashield": {
+      "command": "datashield-mcp",
+      "args": []
+    }
+  }
+}
+```
+
+Then restart Claude Desktop and you’ll see the DataShield tools available.
+
+## 💻 Claude Code Setup
+
+In your project, you can invoke the MCP server via:
+
+```bash
+npx -y @modelcontextprotocol/cli datashield-mcp
+```
+
+Or add to your Claude Code MCP configuration.
+
+## 🖱️ Cursor Setup
+
+In Cursor, add an MCP server:
+
+- **Name**: datashield
+- **Command**: datashield-mcp
+- **Args**: (leave empty)
+
+## 🛠️ Example Usage
+
+Ask your AI agent:
+
+```
+"Inspect this CSV file: ./data/customers.csv"
+```
+
+```
+"Profile the dataset and tell me the data quality issues."
+```
+
+```
+"Detect any PII in the file and show masked examples."
+```
+
+```
+"Sanitize the PII by hashing and create a safe copy for sharing."
+```
+
+```
+"Generate a markdown report of the data quality."
+```
+
+## 📊 DataShield Quality Score
+
+An internal heuristic from 0–100 based on:
+
+- Completeness (missing data)
+- Uniqueness (duplicate rows)
+- Validity (format consistency)
+- Consistency (standardization)
+- Duplicate level
+- Privacy risk (PII & secrets detected)
+
+*Note: This is a DataShield‑specific metric, not an external standard.*
+
+## 🧪 Examples
+
+See the `examples/` directory for sample dirty datasets and demo scripts.
+
+## 🧩 Premium Add‑On (DataShield Pro)
+
+For $2 one‑time purchase, get:
+
+- Advanced PII rule pack (regional IDs, tax IDs, financial identifiers)
+- Premium data‑cleaning recipes (CRM, marketing, finance, surveys)
+- Advanced validation templates (customer, employee, orders datasets)
+- 50+ high‑quality AI workflow prompts for Claude
+- Premium workflow recipes (cleaning, privacy, validation, reporting, comparison)
+*All delivered as downloadable resources; the core MCP remains free and open source.*
+
+## 📜 License
+
+MIT © DataShield Contributors
+
+## 🙏 Contributing
+
+Contributions welcome! See `CONTRIBUTING.md`.
+
+## 🔐 Security
+
+See `SECURITY.md` for responsible disclosure.

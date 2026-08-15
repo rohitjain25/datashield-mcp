@@ -1,0 +1,28 @@
+{
+  "description": "Validation schema for a typical customer CSV export",
+  "required_columns": ["customer_id", "email", "phone", "signup_date", "country"],
+  "required_values": {
+    "customer_id": true,
+    "email": true,
+    "phone": true
+  },
+  "unique_columns": ["customer_id", "email"],
+  "numeric_ranges": {
+    "customer_id": { "min": 1 }
+  },
+  "date_ranges": {
+    "signup_date": {
+      "min": "2000-01-01",
+      "max": "2026-12-31"
+    }
+  },
+  "allowed_categories": {
+    "country": [
+      "US", "CA", "MX", "GB", "DE", "FR", "JP", "AU", "NZ"
+    ]
+  },
+  "null_thresholds": {
+    "signup_date": 0.0,
+    "country": 0.05
+  }
+}

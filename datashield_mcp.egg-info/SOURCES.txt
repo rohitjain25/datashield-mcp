@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+datashield_mcp.egg-info/PKG-INFO
+datashield_mcp.egg-info/SOURCES.txt
+datashield_mcp.egg-info/dependency_links.txt
+datashield_mcp.egg-info/entry_points.txt
+datashield_mcp.egg-info/requires.txt
+datashield_mcp.egg-info/top_level.txt
+src/datashield_mcp/__init__.py
+src/datashield_mcp/cli.py
+src/datashield_mcp/server.py
