@@ -10,3 +10,4 @@ datashield_mcp.egg-info/top_level.txt
 src/datashield_mcp/__init__.py
 src/datashield_mcp/cli.py
 src/datashield_mcp/server.py
+tests/test_basic.py
